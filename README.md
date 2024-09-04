@@ -64,3 +64,48 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+"post-install-cmd": [
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\thumbnails')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\thumbnails' }\"",
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\fotos')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\fotos' }\"",
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\file_tugas_kelompok_materi\\file_lama')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\file_tugas_kelompok_materi\\file_lama' }\"",
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\file_materi\\file_lama')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\file_materi\\file_lama' }\"",
+            "powershell -Command \"Copy-Item 'public\\thumbnail\\*' -Destination 'storage\\app\\public\\thumbnails' -Recurse -Force\"",
+            "powershell -Command \"Copy-Item 'public\\foto\\*' -Destination 'storage\\app\\public\\fotos' -Recurse -Force\"",
+            "powershell -Command \"Copy-Item 'public\\tugas_kelompok_materi\\*' -Destination 'storage\\app\\public\\file_tugas_kelompok_materi\\file_lama' -Recurse -Force\"",
+            "powershell -Command \"Copy-Item 'public\\file_materi\\*' -Destination 'storage\\app\\public\\file_materi\\file_lama' -Recurse -Force\""
+        ],
+        "post-update-cmd": [
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\thumbnails')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\thumbnails' }\"",
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\fotos')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\fotos' }\"",
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\file_tugas_kelompok_materi\\file_lama')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\file_tugas_kelompok_materi\\file_lama' }\"",
+            "powershell -Command \"if (-Not (Test-Path -Path 'storage\\app\\public\\file_materi\\file_lama')) { New-Item -ItemType Directory -Path 'storage\\app\\public\\file_materi\\file_lama' }\"",
+            "powershell -Command \"Copy-Item 'public\\thumbnail\\*' -Destination 'storage\\app\\public\\thumbnails' -Recurse -Force\"",
+            "powershell -Command \"Copy-Item 'public\\foto\\*' -Destination 'storage\\app\\public\\fotos' -Recurse -Force\"",
+            "powershell -Command \"Copy-Item 'public\\tugas_kelompok_materi\\*' -Destination 'storage\\app\\public\\file_tugas_kelompok_materi\\file_lama' -Recurse -Force\"",
+            "powershell -Command \"Copy-Item 'public\\file_materi\\*' -Destination 'storage\\app\\public\\file_materi\\file_lama' -Recurse -Force\"",
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+
+
+"post-install-cmd": [
+            "mkdir -p storage/app/public/thumbnails",
+            "mkdir -p storage/app/public/fotos",
+            "mkdir -p storage/app/public/file_tugas_kelompok_materi/file_lama",
+            "mkdir -p storage/app/public/file_materi/file_lama",
+            "cp -r public/thumbnail/* storage/app/public/thumbnails",
+            "cp -r public/foto/* storage/app/public/fotos",
+            "cp -r public/tugas_kelompok_materi/* storage/app/public/file_tugas_kelompok_materi/file_lama",
+            "cp -r public/file_materi/* storage/app/public/file_materi/file_lama"
+        ],
+        "post-update-cmd": [
+            "mkdir -p storage/app/public/thumbnails",
+            "mkdir -p storage/app/public/fotos",
+            "mkdir -p storage/app/public/file_tugas_kelompok_materi/file_lama",
+            "mkdir -p storage/app/public/file_materi/file_lama",
+            "cp -r public/thumbnail/* storage/app/public/thumbnails",
+            "cp -r public/foto/* storage/app/public/fotos",
+            "cp -r public/tugas_kelompok_materi/* storage/app/public/file_tugas_kelompok_materi/file_lama",
+            "cp -r public/file_materi/* storage/app/public/file_materi/file_lama",
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
