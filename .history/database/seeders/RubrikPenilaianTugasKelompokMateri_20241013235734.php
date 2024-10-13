@@ -203,14 +203,14 @@ class RubrikPenilaianTugasKelompokMateri extends Seeder
             array('id' => '189','rubrik_penilaian_id' => '35','tugas_kelompok_materi_id' => '61','created_at' => '2024-09-09 21:01:26','updated_at' => '2024-09-09 21:01:26'),
             array('id' => '190','rubrik_penilaian_id' => '36','tugas_kelompok_materi_id' => '61','created_at' => '2024-09-09 21:01:34','updated_at' => '2024-09-09 21:01:34'),
             array('id' => '191','rubrik_penilaian_id' => '37','tugas_kelompok_materi_id' => '61','created_at' => '2024-09-09 21:01:39','updated_at' => '2024-09-09 21:01:39'),
-            array('id' => '192','rubrik_penilaian_id' => '34','tugas_kelompok_materi_id' => '62','created_at' => '2024-10-07 08:45:27','updated_at' => '2024-10-07 08:45:27'),
-  array('id' => '193','rubrik_penilaian_id' => '35','tugas_kelompok_materi_id' => '62','created_at' => '2024-10-07 08:45:31','updated_at' => '2024-10-07 08:45:31'),
-  array('id' => '194','rubrik_penilaian_id' => '36','tugas_kelompok_materi_id' => '62','created_at' => '2024-10-07 08:45:36','updated_at' => '2024-10-07 08:45:36'),
-  array('id' => '195','rubrik_penilaian_id' => '37','tugas_kelompok_materi_id' => '62','created_at' => '2024-10-07 08:45:40','updated_at' => '2024-10-07 08:45:40'),
-  array('id' => '196','rubrik_penilaian_id' => '34','tugas_kelompok_materi_id' => '63','created_at' => '2024-10-07 08:47:15','updated_at' => '2024-10-07 08:47:15'),
-  array('id' => '197','rubrik_penilaian_id' => '35','tugas_kelompok_materi_id' => '63','created_at' => '2024-10-07 08:47:19','updated_at' => '2024-10-07 08:47:19'),
-  array('id' => '198','rubrik_penilaian_id' => '36','tugas_kelompok_materi_id' => '63','created_at' => '2024-10-07 08:47:23','updated_at' => '2024-10-07 08:47:23'),
-  array('id' => '199','rubrik_penilaian_id' => '37','tugas_kelompok_materi_id' => '63','created_at' => '2024-10-07 08:47:28','updated_at' => '2024-10-07 08:47:28')
+            array('id' => '192','rubrik_penilaian_id' => '34','assignmentId' => '62','created_at' => '2024-10-07 08:45:27','updated_at' => '2024-10-07 08:45:27'),
+  array('id' => '193','rubrik_penilaian_id' => '35','assignmentId' => '62','created_at' => '2024-10-07 08:45:31','updated_at' => '2024-10-07 08:45:31'),
+  array('id' => '194','rubrik_penilaian_id' => '36','assignmentId' => '62','created_at' => '2024-10-07 08:45:36','updated_at' => '2024-10-07 08:45:36'),
+  array('id' => '195','rubrik_penilaian_id' => '37','assignmentId' => '62','created_at' => '2024-10-07 08:45:40','updated_at' => '2024-10-07 08:45:40'),
+  array('id' => '196','rubrik_penilaian_id' => '34','assignmentId' => '63','created_at' => '2024-10-07 08:47:15','updated_at' => '2024-10-07 08:47:15'),
+  array('id' => '197','rubrik_penilaian_id' => '35','assignmentId' => '63','created_at' => '2024-10-07 08:47:19','updated_at' => '2024-10-07 08:47:19'),
+  array('id' => '198','rubrik_penilaian_id' => '36','assignmentId' => '63','created_at' => '2024-10-07 08:47:23','updated_at' => '2024-10-07 08:47:23'),
+  array('id' => '199','rubrik_penilaian_id' => '37','assignmentId' => '63','created_at' => '2024-10-07 08:47:28','updated_at' => '2024-10-07 08:47:28')
         );
 
         foreach ($rubriks as $rubrik) {
