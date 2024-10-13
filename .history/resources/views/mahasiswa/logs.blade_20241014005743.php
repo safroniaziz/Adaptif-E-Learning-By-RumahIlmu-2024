@@ -56,7 +56,7 @@
                                         <!--end::Info-->
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
-                                            <img src="{{ asset(Auth::user()->foto ? 'storage/' . Auth::user()->foto : 'storage/fotos/profil.jpeg') }}" alt="foto profil" />
+                                            <img src="{{ asset(Auth::user()->foto ? 'storage/' . Auth::user()->foto : 'storage/fotos/endina.jpeg') }}" alt="foto profil" />
 
                                         </div>
                                         <!--end::User-->
