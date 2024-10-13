@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nama_materi');
             $table->text('isi_materi');
             $table->string('file_materi')->nullable();
-            $table->string('url_materi');
+            $table->string('url_materi')->nullable();
             $table->string('url_kedua_materi')->nullable();
             $table->string('critical_status');
             $table->timestamps();

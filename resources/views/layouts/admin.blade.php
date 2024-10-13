@@ -97,6 +97,16 @@
             #checkAll {
                 cursor: pointer;
             }
+
+            /* Memastikan Select2 container mengisi lebar penuh kolom form */
+            .select2-container {
+                width: 100% !important;
+            }
+
+            .select2-container--default .select2-selection--single {
+                height: calc(2.25rem + 2px) !important; /* Sesuaikan tinggi sesuai dengan elemen form lainnya */
+            }
+
         </style>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">

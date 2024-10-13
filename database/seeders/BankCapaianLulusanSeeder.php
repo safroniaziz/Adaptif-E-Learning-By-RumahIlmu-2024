@@ -13,6 +13,7 @@ class BankCapaianLulusanSeeder extends Seeder
      */
     public function run(): void
     {
+        //capaian_lulusans
         $data = [
             [
                 'id' => 6,

@@ -13,6 +13,7 @@ class KelasKuisionerPenilaianKelompokSeeder extends Seeder
      */
     public function run(): void
     {
+        // kuisioner_kelompok_kelas
         $KuisionerPenilaianKelompokKelas = array(
             // array('id' => '1','kelas_id' => '28','bank_penilaian_kelompok_id' => '1','created_at' => '2024-04-01 08:05:17','updated_at' => '2024-04-01 08:05:17'),
             // array('id' => '2','kelas_id' => '28','bank_penilaian_kelompok_id' => '2','created_at' => '2024-04-01 08:05:20','updated_at' => '2024-04-01 08:05:20'),

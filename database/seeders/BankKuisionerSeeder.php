@@ -13,6 +13,7 @@ class BankKuisionerSeeder extends Seeder
      */
     public function run(): void
     {
+        // bank questioners
         $data = [
             [
                 'id' => 1,

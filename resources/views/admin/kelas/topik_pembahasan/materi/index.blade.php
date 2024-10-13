@@ -131,6 +131,7 @@
                                         <td>
                                             <div class="button-container2">
                                                 <a href="{{ route('kelas.topikPembahasan.materi.tugasKelompok',[$data->kelas->id, $data->id, $materi->id]) }}" class="btn btn-default btn-sm btn-flat"><i class="fa fa-tasks"></i>&nbsp;Tugas Kelompok</a>
+                                                <a href="{{ route('kelas.topikPembahasan.materi.kuis',[$data->kelas->id, $data->id, $materi->id]) }}" class="btn btn-default btn-sm btn-flat"><i class="fa fa-question"></i>&nbsp;Kuis</a>
                                             </div>
                                         </td>
 

@@ -13,6 +13,7 @@ class IndikatorPenilaianSeeder extends Seeder
      */
     public function run(): void
     {
+        // indikator_penilaians
         $indikator_penilaians = array(
             array('id' => '26','rubrik_penilaian_id' => '30','nama_indikator' => 'Mahasiswa menyusun masalah, fakta, dan tujuan permasalahan dengan tepat.  Mahasiswa mendesain strategi penyelesaian dan solusi permasalahan dengan alur logika yang jelas.','keterangan' => 'Kreasi','skor_indikator' => '3','created_at' => '2022-08-19 17:23:55','updated_at' => '2022-08-19 17:25:50'),
             array('id' => '27','rubrik_penilaian_id' => '30','nama_indikator' => 'Mahasiswa mengevaluasi sebagian masalah, fakta, dan seluruh tujuan permasalahan, Mahasiswa merekomendasikan strategi penyelesaian dan solusi permasalahan dengan alur logika yang jelas.','keterangan' => 'Evaluasi','skor_indikator' => '2','created_at' => '2022-08-19 17:24:18','updated_at' => '2022-08-19 17:25:59'),

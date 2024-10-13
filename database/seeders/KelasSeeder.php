@@ -13,6 +13,7 @@ class KelasSeeder extends Seeder
      */
     public function run(): void
     {
+        // courses
         $courses = [
             [
                 'id' => 18,

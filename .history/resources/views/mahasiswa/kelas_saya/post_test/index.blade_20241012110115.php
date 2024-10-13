@@ -1,0 +1,62 @@
+@extends('mahasiswa/kelas_saya.detail_materi_template')
+@section('contentMateri')
+<div class="flex-lg-row-fluid">
+    <div class="mb-17">
+        <div class="d-flex flex-stack mb-2">
+            <h4 class="fs-2x text-gray-800 w-bolder mb-2">Kuis Post Test</h4>
+        </div>
+        <div class="separator separator-dashed mb-9"></div>
+
+        @php
+            $alertMessage = null;
+            $alertTitle = null;
+            $alertType = 'danger';
+
+            if ($alertDiskusi) {
+                $alertMessage = "Anda belum mengikuti diskusi apa pun. Harap ikuti diskusi untuk melanjutkan.";
+                $alertTitle = "Tidak Ada Diskusi";
+            } elseif ($alertTugasKelompok) {
+                $alertMessage = "Anda belum mengumpulkan tugas kelompok. Harap mengumpulkan tugas kelompok terlebih dahulu untuk melanjutkan.";
+                $alertTitle = "Tidak Ada Tugas Kelompok";
+            } elseif ($alertTugasIndividu) {
+                $alertMessage = "Anda belum mengumpulkan tugas individu. Harap mengumpulkan tugas individu terlebih dahulu untuk melanjutkan.";
+                $alertTitle = "Tidak Ada Tugas Individu";
+            } elseif ($isSelesai) {
+                $alertMessage = "Anda telah menyelesaikan kuis post test ini.";
+                $alertTitle = "Kuis Selesai";
+                $alertType = 'success';
+            } elseif ($alertKuis) {
+                $alertMessage = "Kuis post test belum tersedia untuk materi ini.";
+                $alertTitle = "Kuis Belum Tersedia";
+                $alertType = 'warning';
+            }
+        @endphp
+
+        @if($alertMessage)
+            <div class="alert alert-dismissible bg-light-{{ $alertType }} border border-{{ $alertType }} border-dashed d-flex flex-column flex-sm-row w-100 p-5 mb-10">
+                <i class="ki-duotone ki-message-text-2 fs-2hx text-{{ $alertType }} me-4 mb-5 mb-sm-0">
+                    <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                </i>
+                <div class="d-flex flex-column pe-0 pe-sm-10">
+                    <h5 class="mb-1">{{ $alertTitle }}</h5>
+                    <span>{{ $alertMessage }}</span>
+                </div>
+                <button type="button" class="position-absolute position-sm-relative m-2 m-sm-0 top-0 end-0 btn btn-icon ms-sm-auto">
+                    <i class="ki-duotone ki-cross fs-1 text-{{ $alertType }}">
+                        <span class="path1"></span><span class="path2"></span>
+                    </i>
+                </button>
+            </div>
+        @else
+            {{-- Tampilkan kuis di sini jika tidak ada alert yang ditampilkan --}}
+            @if($kuisPostTest && $soalKuis)
+                {{-- Tambahkan logika untuk menampilkan kuis --}}
+                <div>
+                    <h5>Kuis Post Test</h5>
+                    {{-- Tambahkan form atau komponen untuk menampilkan soal kuis --}}
+                </div>
+            @endif
+        @endif
+    </div>
+</div>
+@endsection

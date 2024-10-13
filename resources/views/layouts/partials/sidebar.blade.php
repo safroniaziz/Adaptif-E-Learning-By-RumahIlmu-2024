@@ -57,7 +57,9 @@
         'kelas.topikPembahasan.subCpmk',
         'kelas.topikPembahasan.materi',
         'kelas.topikPembahasan.materi.detail',
-        'kelas.topikPembahasan.materi.tugasKelompok'
+        'kelas.topikPembahasan.materi.tugasKelompok',
+        'kelas.topikPembahasan.materi.kuis',
+        'kelas.topikPembahasan.materi.soalKuis',
     ]) }}">
     <a href="{{ route('kelas') }}">
         <i class="fa fa-book"></i>

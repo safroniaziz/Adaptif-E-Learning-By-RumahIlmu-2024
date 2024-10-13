@@ -20,7 +20,6 @@
                     <h3 class="text-gray-900">Kelas Tersedia</h3>
                     <!--end::Title-->
                     <!--begin::Link-->
-                    <a href="#" class="fs-6 fw-semibold link-primary">Kelas Saya</a>
                     <!--end::Link-->
                 </div>
                 <!--end::Content-->

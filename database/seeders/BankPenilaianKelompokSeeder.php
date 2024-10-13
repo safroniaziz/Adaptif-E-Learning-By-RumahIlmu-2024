@@ -14,6 +14,7 @@ class BankPenilaianKelompokSeeder extends Seeder
      */
     public function run(): void
     {
+        // assesment_sheet_questions
         $bankPenilaianKelompoks = array(
             array('id' => '1','pertanyaan' => 'Dia selalu hadir di pertemuan kelompok tepat waktu','created_at' => '2022-10-07 10:40:42','updated_at' => '2022-10-07 10:40:42'),
             array('id' => '2','pertanyaan' => 'Dia selalu membawa informasi relevan, sumber bacaan, dan solusi pemecahan masalah di setiap pertemuan kelompok','created_at' => '2022-10-07 10:40:48','updated_at' => '2022-10-07 10:40:48'),

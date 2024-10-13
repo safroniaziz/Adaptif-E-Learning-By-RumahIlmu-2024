@@ -13,6 +13,7 @@ class RubrikPenilaianUserSeeder extends Seeder
      */
     public function run(): void
     {
+        // rubrik_penilaians
         $rubrik_penilaians = array(
             array('id' => '30','rubrik_penilaian' => 'Individu - Identifikasi masalah, strategi pemecahan masalah, dan alur logika','created_at' => '2022-08-19 17:15:52','updated_at' => '2024-04-29 18:59:54'),
             array('id' => '31','rubrik_penilaian' => 'Individu - Algoritma, desain dan implementasi','created_at' => '2022-08-19 17:16:17','updated_at' => '2022-08-19 17:16:17'),

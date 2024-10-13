@@ -19,4 +19,8 @@ class KelasMahasiswa extends Pivot
     {
         return $this->hasMany(KelasMahasiswaDetail::class, 'kelas_mahasiswa_id');
     }
+
+    public function mahasiswa(){
+        return $this->belongsTo(User::class,'mahasiswa_id','id');
+    }
 }

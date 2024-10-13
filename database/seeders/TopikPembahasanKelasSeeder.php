@@ -14,6 +14,7 @@ class TopikPembahasanKelasSeeder extends Seeder
      */
     public function run()
     {
+        //topics
         DB::table('topik_pembahasan_kelas')->insert([
             [
                 'id' => 50,
@@ -110,7 +111,7 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 28,
                 'nama_topik' => 'Facts or opinion',
                 'cpmk' => '<p>Mahasiswa mampu memahami, mengidentifikasi, dan menuliskan kembali kalimat fakta dan opini</p>',
-                'topik_ke'  =>  null,
+                'topik_ke'  =>  1,
                 'created_at' => '2024-04-01 00:22:24',
                 'updated_at' => '2024-04-01 00:33:12',
             ],
@@ -119,7 +120,7 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 31,
                 'nama_topik' => 'Pengenalan Java dan Tipe Data',
                 'cpmk' => '<p><span dir="ltr" lang="IN" style="font-size:11.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">Mampu memahami berbagai metodologi pengembangan sistem</span></span></p>',
-                'topik_ke' => null,
+                'topik_ke' => 1,
                 'created_at' => '2024-08-16 13:03:14',
                 'updated_at' => '2024-08-16 13:03:59',
             ],
@@ -128,7 +129,7 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 31,
                 'nama_topik' => 'Operator',
                 'cpmk' => '<p><span dir="ltr" lang="IN" style="font-size:11.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">Mampu memahami berbagai metodologi pengembangan sistem</span></span></p>',
-                'topik_ke' => null,
+                'topik_ke' => 2,
                 'created_at' => '2024-08-16 13:05:15',
                 'updated_at' => '2024-08-16 13:05:15',
             ],
@@ -137,7 +138,7 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 31,
                 'nama_topik' => 'Kelas, Objek, Method',
                 'cpmk' => '<p><span dir="ltr" lang="IN" style="font-size:11.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">Mampu memahami berbagai metodologi pengembangan sistem</span></span></p>',
-                'topik_ke' => null,
+                'topik_ke' => 3,
                 'created_at' => '2024-08-16 13:14:20',
                 'updated_at' => '2024-08-16 13:14:20',
             ],
@@ -146,7 +147,7 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 31,
                 'nama_topik' => 'Percabangan: IF dan SWITCH',
                 'cpmk' => '<p><span dir="ltr" lang="IN" style="font-size:11.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">Mampu memahami berbagai metodologi pengembangan sistem</span></span></p>',
-                'topik_ke' => null,
+                'topik_ke' => 4,
                 'created_at' => '2024-08-16 13:14:58',
                 'updated_at' => '2024-08-16 13:14:58',
             ],
@@ -155,7 +156,7 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 31,
                 'nama_topik' => 'Perulangan: FOR dan WHILE',
                 'cpmk' => '<p><span dir="ltr" lang="IN" style="font-size:11.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">Mampu memahami berbagai metodologi pengembangan sistem</span></span></p>',
-                'topik_ke' => null,
+                'topik_ke' => 5,
                 'created_at' => '2024-08-16 13:15:23',
                 'updated_at' => '2024-08-16 13:15:23',
             ],
@@ -164,9 +165,18 @@ class TopikPembahasanKelasSeeder extends Seeder
                 'kelas_id' => 32,
                 'nama_topik' => 'Himpunan dan Fungsi Keanggotaan Fuzzy',
                 'cpmk' => '<p>Mampu memahami dan menjelaskan konsep logika <em>fuzzy </em>serta langkah kerja dari metode <em>fuzzy </em>[S8,S9, P2];</p><p>Mampu menganalisis permasalahan dan mengaplikasikan metode <em>fuzzy </em>yang sesuai untuk studi kasus tertentu [S8, P7,',
-                'topik_ke' => null,
+                'topik_ke' => 1,
                 'created_at' => '2024-08-25 16:37:00',
                 'updated_at' => '2024-08-25 16:37:00',
+            ],
+            [
+                'id' => 70,
+                'kelas_id' => 32,
+                'nama_topik' => 'Fuzzy Inference System',
+                'cpmk' => '<p>Mahasiswa mampu mendesain Fuzzy Inference System</p>',
+                'topik_ke' => 2,
+                'created_at' => '2024-09-09 11:40:21',
+                'updated_at' => '2024-09-09 11:40:21',
             ],
         ]);
     }

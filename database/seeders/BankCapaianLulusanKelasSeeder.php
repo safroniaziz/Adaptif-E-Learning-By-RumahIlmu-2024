@@ -6,13 +6,14 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class BankCapaianLulusanKelasSeeder extends Seeder
+class   BankCapaianLulusanKelasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
+        //course_cpls
         $data = [
             [8, 25, 7, '2022-08-20 11:20:23', '2022-08-20 11:20:23'],
             [9, 18, 7, '2022-08-20 11:20:39', '2022-08-20 11:20:39'],

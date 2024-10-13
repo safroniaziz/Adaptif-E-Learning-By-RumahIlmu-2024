@@ -13,6 +13,7 @@ class JenisKuisionerSeeder extends Seeder
      */
     public function run(): void
     {
+        //jenis_questioners
         $jenisKuisioners = [
             'Analisis',
             'Kepercayaan diri',

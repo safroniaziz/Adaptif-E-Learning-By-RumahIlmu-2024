@@ -13,6 +13,7 @@ class KelasKuisionerSeeder extends Seeder
      */
     public function run(): void
     {
+        // questionaires
         $kelasKuisioners = array(
             array('id' => '1','kelas_id' => '25','bank_kuisioner_id' => '1'),
             array('id' => '2','kelas_id' => '25','bank_kuisioner_id' => '2'),

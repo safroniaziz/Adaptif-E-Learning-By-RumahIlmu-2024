@@ -18,7 +18,7 @@ class TugasKelompokMateri extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function materis(): BelongsTo
+    public function materi(): BelongsTo
     {
         return $this->belongsTo(Materi::class, 'materi_id', 'id');
     }
@@ -27,5 +27,9 @@ class TugasKelompokMateri extends Model
     {
         return $this->belongsToMany(RubrikPenilaian::class, 'rubrik_penilaian_tugas_kelompoks','tugas_kelompok_materi_id','rubrik_penilaian_id')
                     ->using(RubrikPenilaianTugasKelompok::class); // Menggunakan model pivot
+    }
+
+    public function pengumpulanTugas(){
+        return $this->hasMany(PengumpulanTugasKelompok::class, 'tugas_kelompok_id','id');
     }
 }

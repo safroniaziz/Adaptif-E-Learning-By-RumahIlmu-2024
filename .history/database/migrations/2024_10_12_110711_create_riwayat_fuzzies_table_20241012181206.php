@@ -1,0 +1,42 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('riwayat_fuzzies', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('mahasiswa_id'); // Alias studentId
+            $table->unsignedBigInteger('materi_id_sebelumnya')->nullable(); // Alias pageIdBefore
+            $table->unsignedBigInteger('materi_id_setelahnya')->nullable(); // Alias pageIdAfter
+            $table->decimal('skor_posttest', 5, 2)->default(0); // Alias score_post_test
+            $table->decimal('skor_tugas_individu', 5, 2)->default(0); // Alias score_individu
+            $table->decimal('skor_tugas_kelompok', 5, 2)->default(0); // Alias score_kelompok
+            $table->decimal('skor_diskusi', 5, 2)->default(0); // Alias score_diskusi
+            $table->decimal('skor_berfikir_kritis', 5, 2)->default(0); // Alias berfikir_kritis
+            $table->string('kode_aturan', 10)->nullable(); // Alias kode_aturan
+            $table->timestamps();
+            $table->softDeletes();
+
+            // Tambahkan foreign key constraints jika diperlukan
+            $table->foreign('mahasiswa_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('materi_id_sebelumnya')->references('id')->on('materis')->onDelete('set null');
+            $table->foreign('materi_id_setelahnya')->references('id')->on('materis')->onDelete('set null');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('riwayat_fuzzies');
+    }
+};
