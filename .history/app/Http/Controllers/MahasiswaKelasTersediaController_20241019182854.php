@@ -144,6 +144,7 @@ class MahasiswaKelasTersediaController extends Controller
             })
             ->first();
 
+
         if ($materi) {
             $kelasMahasiswaCreated = KelasMahasiswa::create([
                 'mahasiswa_id' => Auth::user()->id,

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class JawabanKuisMateri extends Model
@@ -18,6 +17,6 @@ class JawabanKuisMateri extends Model
      */
     public function bankSoalPembahasan(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'bank_soal_pembahasan_id', 'id');
+        return $this->belongsTo(User::class, 'foreign_key', 'other_key');
     }
 }

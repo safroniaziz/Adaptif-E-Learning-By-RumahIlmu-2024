@@ -73,9 +73,6 @@
                                         <td>{{ $soalKuis->level_berfikir }}</td>
                                         <td>{!! $soalKuis->pembahasan !!}</td>
                                         <td>
-                                            <a href="{{ route('soalKuis.jawaban',[$kelas->id, $soalKuis->id]) }}"></a>
-                                        </td>
-                                        <td>
                                             <div class="action-buttons">
                                                 <a onclick="editSoalKuis({{ $kelas->id }},{{ $soalKuis->id }})" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                 <form action="{{ route('soalKuis.delete',[$soalKuis->id, $kelas->id]) }}" method="POST" style="margin: 0;">

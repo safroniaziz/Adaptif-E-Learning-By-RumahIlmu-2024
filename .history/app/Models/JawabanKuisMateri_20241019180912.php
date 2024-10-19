@@ -18,6 +18,6 @@ class JawabanKuisMateri extends Model
      */
     public function bankSoalPembahasan(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'bank_soal_pembahasan_id', 'id');
+        return $this->belongsTo(User::class, 'bank_soal_pembahasan_id', 'other_key');
     }
 }

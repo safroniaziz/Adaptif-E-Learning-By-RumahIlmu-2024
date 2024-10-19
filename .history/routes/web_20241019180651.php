@@ -6,7 +6,6 @@ use App\Http\Controllers\BankPenilaianKelompokController;
 use App\Http\Controllers\BankSoalPembahasanController;
 use App\Http\Controllers\CapaianLulusanKelasController;
 use App\Http\Controllers\IndikatorPenilaianController;
-use App\Http\Controllers\JawabanBankSoalPembahasanController;
 use App\Http\Controllers\JenisKuisionerController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\KuisionerKelasController;
@@ -173,12 +172,13 @@ Route::middleware('auth','isDosen')->group(function(){
         Route::patch('/{kelas}/update',[BankSoalPembahasanController::class, 'update'])->name('soalKuis.update');
         Route::delete('/{soalKuis}/kelas/{kelas}/delete',[BankSoalPembahasanController::class, 'delete'])->name('soalKuis.delete');
 
-        Route::group(['prefix'  => '/kelas/{kelas}/jawaban'],function(){
-            Route::get('/{soalKuis}/',[JawabanBankSoalPembahasanController::class, 'index'])->name('soalKuis.jawaban');
-            Route::get('/{soalKuis}/detail',[JawabanBankSoalPembahasanController::class, 'detail'])->name('soalKuis.jawaban.detail');
-            Route::post('/{soalKuis}/post',[JawabanBankSoalPembahasanController::class, 'post'])->name('soalKuis.jawaban.post');
-            Route::patch('/{soalKuis}/update',[JawabanBankSoalPembahasanController::class, 'update'])->name('soalKuis.jawaban.update');
-            Route::delete('/{soalKuis}/soalKuis/{jawaban}/delete',[JawabanBankSoalPembahasanController::class, 'delete'])->name('soalKuis.jawaban.delete');
+        Route::group(['prefix'  => 'jawaban'],function(){
+            Route::get('/',[Jawaba::class, 'index'])->name('soalKuis');
+            Route::get('/{kelas}/detail',[Jawaba::class, 'detail'])->name('soalKuis.detail');
+            Route::post('/{kelas}/post',[Jawaba::class, 'post'])->name('soalKuis.post');
+            Route::get('/{soalKuis}/kelas/{kelas}/edit',[Jawaba::class, 'edit'])->name('soalKuis.edit');
+            Route::patch('/{kelas}/update',[Jawaba::class, 'update'])->name('soalKuis.update');
+            Route::delete('/{soalKuis}/kelas/{kelas}/delete',[Jawaba::class, 'delete'])->name('soalKuis.delete');
         });
     });
 

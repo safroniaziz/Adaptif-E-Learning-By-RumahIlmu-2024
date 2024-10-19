@@ -5,17 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\BankSoalPembahasan;
 use App\Models\Kelas;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 
-class BankSoalPembahasanController extends Controller
+class JawabanBankSoalPembahasanController extends Controller
 {
-    public function index(){
-        $kelas = Kelas::withCount(['bankSoalPembahasans', 'bankSoalPembahasans as jawaban_kuis_materis_count' => function($query) {
-            $query->withCount('jawabans');
-        }])->orderBy('created_at', 'desc')->get();
-        $kelas = Kelas::withCount(['bankSoalPembahasans'])->orderBy('created_at','desc')->get();
+    public function index(Kelas $kelas, BankSoalPembahasan $soalKuis){
+        return $soalKuis;
+        $kelas = BankSoalPembahasan::with(['jawabanKuisMateris'])->get();
         return view('admin/soal_kuis.index',[
             'kelas'   =>  $kelas,
         ]);

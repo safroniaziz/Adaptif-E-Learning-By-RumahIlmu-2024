@@ -128,21 +128,19 @@ class MahasiswaKelasTersediaController extends Controller
 
         if ($kelas->jenis_kelas == "umum") {
             $critical_status = '0';
-        } else {
+        }else{
             $critical_status = match (true) {
                 $rata_rata_nilai >= 0 && $rata_rata_nilai <= 3 => '0',
                 $rata_rata_nilai > 3 && $rata_rata_nilai <= 4.2 => '1',
                 $rata_rata_nilai > 4.2 && $rata_rata_nilai <= 6 => '2',
-                default => '0', // Default case jika tidak ada kondisi yang sesuai
             };
         }
-
         $materi = Materi::with(['topikPembahasanKelas.kelas'])
-            ->where('critical_status', $critical_status)
-            ->whereHas('topikPembahasanKelas.kelas', function($query) use($kelas) {
-                $query->where('id', $kelas->id);
-            })
-            ->first();
+                    ->where('critical_status', $critical_status)
+                    ->whereHas('topikPembahasanKelas.kelas', function($query) use($kelas) {
+                        $query->where('id', $kelas->id);
+                    })
+                    ->first();
 
         if ($materi) {
             $kelasMahasiswaCreated = KelasMahasiswa::create([

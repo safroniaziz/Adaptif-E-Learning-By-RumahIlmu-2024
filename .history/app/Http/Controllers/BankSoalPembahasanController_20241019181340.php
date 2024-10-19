@@ -12,9 +12,6 @@ use Illuminate\Support\Facades\Validator;
 class BankSoalPembahasanController extends Controller
 {
     public function index(){
-        $kelas = Kelas::withCount(['bankSoalPembahasans', 'bankSoalPembahasans as jawaban_kuis_materis_count' => function($query) {
-            $query->withCount('jawabans');
-        }])->orderBy('created_at', 'desc')->get();
         $kelas = Kelas::withCount(['bankSoalPembahasans'])->orderBy('created_at','desc')->get();
         return view('admin/soal_kuis.index',[
             'kelas'   =>  $kelas,

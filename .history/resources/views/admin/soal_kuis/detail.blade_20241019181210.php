@@ -20,7 +20,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12" style="margin-bottom: 10px;">
-                        <form action="{{ route('soalKuis.post',[$kelas->id]) }}" method="POST" class="form">
+                        <form action="{{ route('soalKuis.jawaban.post',[$kelas->id]) }}" method="POST" class="form">
                             @csrf @method('POST')
                             <div class="row">
                                 <div class="form-group col-md-12">
@@ -45,7 +45,7 @@
                                     <textarea name="pembahasan" class="form-control" id="pembahasan_create" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <a href="{{ route('soalKuis') }}" class="btn btn-warning btn-sm btn-flat"><i class="fa fa-arrow-left"></i>&nbsp; Kembali</a>
+                                    <a href="{{ route('soalKuis.jawaban',[$kelas->id]) }}" class="btn btn-warning btn-sm btn-flat"><i class="fa fa-arrow-left"></i>&nbsp; Kembali</a>
                                     <button type="reset" name="reset" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-refresh"></i>&nbsp;Ulangi</button>
                                     <button type="submit" class="btn btn-primary btn-sm btn-flat btnSubmit"><i class="fa fa-check-circle"></i>&nbsp;Simpan</button>
                                     <hr style="width:20% !important; margin:10px auto; opacity: 0.2;">
@@ -73,7 +73,7 @@
                                         <td>{{ $soalKuis->level_berfikir }}</td>
                                         <td>{!! $soalKuis->pembahasan !!}</td>
                                         <td>
-                                            <a href="{{ route('soalKuis.jawaban',[$kelas->id, $soalKuis->id]) }}"></a>
+                                            <a href="{{ riute('soalKuis.jawaban',[$kelas->id,$soalKuis->id]) }}"></a>
                                         </td>
                                         <td>
                                             <div class="action-buttons">

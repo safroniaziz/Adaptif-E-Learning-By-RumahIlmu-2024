@@ -173,12 +173,13 @@ Route::middleware('auth','isDosen')->group(function(){
         Route::patch('/{kelas}/update',[BankSoalPembahasanController::class, 'update'])->name('soalKuis.update');
         Route::delete('/{soalKuis}/kelas/{kelas}/delete',[BankSoalPembahasanController::class, 'delete'])->name('soalKuis.delete');
 
-        Route::group(['prefix'  => '/kelas/{kelas}/jawaban'],function(){
-            Route::get('/{soalKuis}/',[JawabanBankSoalPembahasanController::class, 'index'])->name('soalKuis.jawaban');
-            Route::get('/{soalKuis}/detail',[JawabanBankSoalPembahasanController::class, 'detail'])->name('soalKuis.jawaban.detail');
-            Route::post('/{soalKuis}/post',[JawabanBankSoalPembahasanController::class, 'post'])->name('soalKuis.jawaban.post');
-            Route::patch('/{soalKuis}/update',[JawabanBankSoalPembahasanController::class, 'update'])->name('soalKuis.jawaban.update');
-            Route::delete('/{soalKuis}/soalKuis/{jawaban}/delete',[JawabanBankSoalPembahasanController::class, 'delete'])->name('soalKuis.jawaban.delete');
+        Route::group(['prefix'  => '/kelas/{kelas}/jawaban{soalKuis}'],function(){
+            Route::get('/',[JawabanBankSoalPembahasanController::class, 'index'])->name('soalKuis');
+            Route::get('/{kelas}/detail',[JawabanBankSoalPembahasanController::class, 'detail'])->name('soalKuis.detail');
+            Route::post('/{kelas}/post',[JawabanBankSoalPembahasanController::class, 'post'])->name('soalKuis.post');
+            Route::get('/{soalKuis}/kelas/{kelas}/edit',[JawabanBankSoalPembahasanController::class, 'edit'])->name('soalKuis.edit');
+            Route::patch('/{kelas}/update',[JawabanBankSoalPembahasanController::class, 'update'])->name('soalKuis.update');
+            Route::delete('/{soalKuis}/kelas/{kelas}/delete',[JawabanBankSoalPembahasanController::class, 'delete'])->name('soalKuis.delete');
         });
     });
 

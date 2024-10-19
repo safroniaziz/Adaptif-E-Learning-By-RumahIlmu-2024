@@ -61,7 +61,6 @@
                                     <th>Pertanyaan</th>
                                     <th>Level Berfikir</th>
                                     <th>Pembahasan</th>
-                                    <th>Jawaban</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -72,9 +71,6 @@
                                         <td>{!! $soalKuis->pertanyaan !!}</td>
                                         <td>{{ $soalKuis->level_berfikir }}</td>
                                         <td>{!! $soalKuis->pembahasan !!}</td>
-                                        <td>
-                                            <a href="{{ route('soalKuis.jawaban',[$kelas->id, $soalKuis->id]) }}"></a>
-                                        </td>
                                         <td>
                                             <div class="action-buttons">
                                                 <a onclick="editSoalKuis({{ $kelas->id }},{{ $soalKuis->id }})" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-edit"></i>&nbsp; Edit</a>

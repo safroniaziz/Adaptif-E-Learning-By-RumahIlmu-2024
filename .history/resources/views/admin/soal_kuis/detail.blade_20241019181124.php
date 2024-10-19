@@ -20,7 +20,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12" style="margin-bottom: 10px;">
-                        <form action="{{ route('soalKuis.post',[$kelas->id]) }}" method="POST" class="form">
+                        <form action="{{ route('soalKuis.jawaban.post',[$kelas->id]) }}" method="POST" class="form">
                             @csrf @method('POST')
                             <div class="row">
                                 <div class="form-group col-md-12">
@@ -73,7 +73,7 @@
                                         <td>{{ $soalKuis->level_berfikir }}</td>
                                         <td>{!! $soalKuis->pembahasan !!}</td>
                                         <td>
-                                            <a href="{{ route('soalKuis.jawaban',[$kelas->id, $soalKuis->id]) }}"></a>
+                                            <a href="{{ riute('soalKuis.jawaban',[$kelas->id,$soalKuis->id]) }}"></a>
                                         </td>
                                         <td>
                                             <div class="action-buttons">

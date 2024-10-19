@@ -73,7 +73,7 @@
                                         <td>{{ $soalKuis->level_berfikir }}</td>
                                         <td>{!! $soalKuis->pembahasan !!}</td>
                                         <td>
-                                            <a href="{{ route('soalKuis.jawaban',[$kelas->id, $soalKuis->id]) }}"></a>
+                                            <a href="{{ riute('soalKuis.jawaban',[$soalKuis->id]) }}"></a>
                                         </td>
                                         <td>
                                             <div class="action-buttons">
