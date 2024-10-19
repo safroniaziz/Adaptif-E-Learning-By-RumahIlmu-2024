@@ -110,24 +110,25 @@ Route::middleware('auth','isMahasiswa')->group(function(){
 Route::middleware('auth','isDosen')->group(function(){
     Route::get('/dashboard', function () {
         $jumlahMahasiswa = User::where('role','mahasiswa')->count();
-        $jumlahKelas = Kelas::count();
-        $jumlahBankSoal = BankSoalPembahasan::count();
-        $jumlahMahasiswaAktif = User::where('role','mahasiswa')->count();
-        $jumlahMateri = Materi::count();
-        $jumlahRubrikPenilaian = RubrikPenilaian::count();
-        $jumlahKuisioner = BankKuisioner::count();
-        $jumlahJenisKuisioner = JenisKuisioner::count();
+$jumlahKelas = Kelas::count();
+$jumlahBankSoal = BankSoalPembahasan::count();
+$jumlahMahasiswaAktif = User::where('role','mahasiswa')->count();
+$jumlahMateri = Materi::count();
+$jumlahRubrikPenilaian = RubrikPenilaian::count();
+$jumlahKuisioner = BankKuisioner::count();
+$jumlahJenisKuisioner = JenisKuisioner::count();
 
-        return view('admin/dashboard', compact(
-            'jumlahMahasiswa',
-            'jumlahKelas',
-            'jumlahBankSoal',
-            'jumlahMahasiswaAktif',
-            'jumlahMateri',
-            'jumlahRubrikPenilaian',
-            'jumlahKuisioner',
-            'jumlahJenisKuisioner'
-        ));
+return view('admin/dashboard', compact(
+    'jumlahMahasiswa',
+    'jumlahKelas',
+    'jumlahBankSoal',
+    'jumlahMahasiswaAktif',
+    'jumlahMateri',
+    'jumlahRubrikPenilaian',
+    'jumlahKuisioner',
+    'jumlahJenisKuisioner'
+));
+
     })->middleware(['auth', 'verified'])->name('dashboard');
 
     Route::group(['prefix'  => 'pencarian'],function(){

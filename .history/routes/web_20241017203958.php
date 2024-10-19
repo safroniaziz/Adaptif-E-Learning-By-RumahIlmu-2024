@@ -128,6 +128,7 @@ Route::middleware('auth','isDosen')->group(function(){
             'jumlahKuisioner',
             'jumlahJenisKuisioner'
         ));
+
     })->middleware(['auth', 'verified'])->name('dashboard');
 
     Route::group(['prefix'  => 'pencarian'],function(){

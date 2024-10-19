@@ -56,7 +56,7 @@ class RegistrationController extends Controller
                     'password' => bcrypt($request->password),
                     'is_active' =>  1,
                     'foto' => $path,
-                    'role'  =>  'mahasiswa',
+                    'role'  =>  'mahasiswa'
                 ]);
 
                 activity()

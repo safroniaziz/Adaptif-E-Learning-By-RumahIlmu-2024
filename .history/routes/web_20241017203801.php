@@ -24,9 +24,7 @@ use App\Http\Controllers\SoalKuisMateriController;
 use App\Http\Controllers\SubCpmkController;
 use App\Http\Controllers\TopikPembahasanKelasController;
 use App\Http\Controllers\TugasKelompokMateriController;
-use App\Models\BankKuisioner;
 use App\Models\BankSoalPembahasan;
-use App\Models\JenisKuisioner;
 use App\Models\Kelas;
 use App\Models\Materi;
 use App\Models\RubrikPenilaian;
@@ -115,19 +113,8 @@ Route::middleware('auth','isDosen')->group(function(){
         $jumlahMahasiswaAktif = User::where('role','mahasiswa')->count();
         $jumlahMateri = Materi::count();
         $jumlahRubrikPenilaian = RubrikPenilaian::count();
-        $jumlahKuisioner = BankKuisioner::count();
-        $jumlahJenisKuisioner = JenisKuisioner::count();
-
-        return view('admin/dashboard', compact(
-            'jumlahMahasiswa',
-            'jumlahKelas',
-            'jumlahBankSoal',
-            'jumlahMahasiswaAktif',
-            'jumlahMateri',
-            'jumlahRubrikPenilaian',
-            'jumlahKuisioner',
-            'jumlahJenisKuisioner'
-        ));
+        $jumlah
+        return view('admin/dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
 
     Route::group(['prefix'  => 'pencarian'],function(){

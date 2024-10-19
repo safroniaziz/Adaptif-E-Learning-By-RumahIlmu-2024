@@ -117,17 +117,7 @@ Route::middleware('auth','isDosen')->group(function(){
         $jumlahRubrikPenilaian = RubrikPenilaian::count();
         $jumlahKuisioner = BankKuisioner::count();
         $jumlahJenisKuisioner = JenisKuisioner::count();
-
-        return view('admin/dashboard', compact(
-            'jumlahMahasiswa',
-            'jumlahKelas',
-            'jumlahBankSoal',
-            'jumlahMahasiswaAktif',
-            'jumlahMateri',
-            'jumlahRubrikPenilaian',
-            'jumlahKuisioner',
-            'jumlahJenisKuisioner'
-        ));
+        return view('admin/dashboard',compact(''));
     })->middleware(['auth', 'verified'])->name('dashboard');
 
     Route::group(['prefix'  => 'pencarian'],function(){

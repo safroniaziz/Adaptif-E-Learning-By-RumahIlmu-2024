@@ -98,8 +98,6 @@
                                             ease-soft-in tracking-tight-soft bg-gradient-to-tl from-black to-blue-500
                                             hover:scale-105 hover:shadow-soft-xs active:opacity-85
                                             tracking-[3px]">LOGIN</button>
-                                            <p>Belum memiliki akun? <a href="{{ route('registration') }}" class="custom-link">Daftar Disini</a></p>
-
                                     </div>
                                 </form>
                             </div>

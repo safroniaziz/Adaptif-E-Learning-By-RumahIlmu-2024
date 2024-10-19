@@ -42,99 +42,115 @@
                             <div class="callout callout-danger">
                                 <h4 style="text-transform: uppercase">Mohon Perhatian</h4>
                                 <p>
-                                    Saat ini tidak ada periode remunerasi yang aktif, semua rubrik dosen dinonaktifkan dan dosen tidak dapat menginputkan rubrik kinerja ke aplikasi!
+                                    Saat ini tidak ada periode remunerasi yang aktif, semua rubrik dosen dinonaktifkan dan dosen tidak dapat menginputkan rubrik kinerja ke aplikasi !
                                     <br>
                                     Untuk mengaktifkan periode remunerasi, silahkan <a href="" style="font-weight: bold; font-style:italic;">klik disini</a>
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-aqua" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahMahasiswa }}</h3>
-                                    <p>Jumlah Siswa Terdaftar</p>
+                                <h3></h3>
+
+                                <p>Jumlah Siswa Terdaftar</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-file-o"></i>
+                                <i class="fa fa-file-o"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-red" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahKelas }}</h3>
-                                    <p>Jumlah Kelas</p>
+                                <h3></h3>
+
+                                <p>Jumlah Kelas</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-file-pdf-o"></i>
+                                <i class="fa fa-file-pdf-o"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-yellow" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahBankSoal }}</h3>
-                                    <p>Jumlah Bank Soal</p>
+                                <h3></h3>
+
+                                <p>Jumlah Bank Soal</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-wpforms"></i>
+                                <i class="fa fa-wpforms"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-green" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahMahasiswaAktif }}</h3>
-                                    <p>Jumlah Siswa Aktif</p>
+                                <h3></h3>
+
+                                <p>Jumlah Siswa Aktif</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-file-excel-o"></i>
+                                <i class="fa fa-file-excel-o"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-aqua" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahMateri }}</h3>
-                                    <p>Jumlah Materi</p>
+                                <h3></h3>
+
+                                <p>Jumlah Materi</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-file-o"></i>
+                                <i class="fa fa-file-o"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-red" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahRubrikPenilaian }}</h3>
-                                    <p>Jumlah Rubrik Penilaian</p>
+                                <h3></h3>
+
+                                <p>Jumlah Rubrik  Penilaian</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-file-pdf-o"></i>
+                                <i class="fa fa-file-pdf-o"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-yellow" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahKuisioner }}</h3>
-                                    <p>Jumlah Verifikator</p>
+                                <h3></h3>
+
+                                <p>Jumlah Verifikator</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-wpforms"></i>
+                                <i class="fa fa-wpforms"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xs-12 col-md-3" style="padding-bottom:10px !important;">
+                            <!-- small box -->
                             <div class="small-box bg-green" style="margin-bottom:0px;">
                                 <div class="inner">
-                                    <h3>{{ $jumlahJenisKuisioner }}</h3>
-                                    <p>Jumlah User Role</p>
+                                <h3></h3>
+
+                                <p>Jumlah User Role</p>
                                 </div>
                                 <div class="icon">
-                                    <i class="fa fa-file-excel-o"></i>
+                                <i class="fa fa-file-excel-o"></i>
                                 </div>
                             </div>
                         </div>
