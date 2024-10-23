@@ -50,9 +50,14 @@
                     </div>
                 </div>
 
-                <a target="_blank" href="{{ asset($tugas->file_tugas) }}" download class="text-white btn btn-success btn-sm my-1">
-                    Download File
-                </a>
+                <!--<a target="_blank" href="{{ asset($tugas->file_tugas) }}" download class="text-white btn btn-success btn-sm my-1">-->
+                <!--    Download File-->
+                <!--</a>-->
+                
+                <a target="_blank" href="{{ Storage::url($tugas->file_tugas) }}" download class="text-white btn btn-success btn-sm my-1">
+    Download File
+</a>
+
 
                 <!--begin::Text-->
                 <p class="fw-semibold fs-4 text-gray-600 mb-2">
